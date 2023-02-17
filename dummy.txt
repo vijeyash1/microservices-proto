@@ -2,3 +2,8 @@ git tag -a golang/order/v1.2.4 -m “golang/order/v1.2.3” \
 git tag -a golang/payment/v1.2.8 -m “golang/order/v1.2.8” \
 git tag -a golang/shipping/v1.2.6 -m “golang/order/v1.2.6” \
 git push --tags
+
+
+protoc -I ./order --go_out ./golang/order --go_opt paths=source_relative --go-grpc_out ./golang/order --go-grpc_opt paths=source_relative ./order/order.proto
+protoc -I ./payment --go_out ./golang/payment --go_opt paths=source_relative --go-grpc_out ./golang/payment --go-grpc_opt paths=source_relative ./payment/payment.proto
+protoc -I ./shipping --go_out ./golang/shipping --go_opt paths=source_relative --go-grpc_out ./golang/shipping --go-grpc_opt paths=source_relative ./shipping/shipping.proto
