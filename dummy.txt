@@ -1,0 +1,4 @@
+git tag -a golang/order/v1.2.4 -m “golang/order/v1.2.3” \ 
+git tag -a golang/payment/v1.2.8 -m “golang/order/v1.2.8” \
+git tag -a golang/shipping/v1.2.6 -m “golang/order/v1.2.6” \
+git push --tags
